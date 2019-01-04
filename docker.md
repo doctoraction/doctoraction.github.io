@@ -74,11 +74,11 @@ Need to be sudo
 
 ## Dockerfile to create an image
 
-`FROM node:8
-\# RUN [adds stuff like installing packages etc]
-COPY nodefirst.js .
-ENTRYPOINT node nodefirst.js [command to run when the container starts]
-EXPOSE 8666`
+    FROM node:8
+    RUN [adds stuff like installing packages etc]
+    COPY nodefirst.js .
+    ENTRYPOINT node nodefirst.js [command to run when the container starts]
+    EXPOSE 8666
 
 ## Create image from Dockerfile
 
