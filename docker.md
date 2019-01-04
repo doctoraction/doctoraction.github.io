@@ -1,10 +1,8 @@
-# DOCKER
+# Docker
 
 ## Misc
 
 Need to be sudo
-
-## Typical work process
 
 Containers are made from images. eg. from an ubuntu image.  
 Images are stored in repos, just like code.  
@@ -23,19 +21,18 @@ Containers can then be made from that image and run on a host.
   
 ## Search standard repo for images
 
-`docker search ubuntu`
+    docker search ubuntu
 
 ## Pull down container
 
-`docker pull ubuntu`  
-`docker pull ubuntu:latest`
-
-(also docker image pull ... etc)
+    docker pull ubuntu
+    docker pull ubuntu:latest
+    docker image pull ubuntu:latest
 
 ## List installed images
 
-`docker images`  
-`docker image ls`
+    docker images
+    docker image ls
 
 ## Create container from an image
 (image name and command)
@@ -53,12 +50,12 @@ Containers can then be made from that image and run on a host.
 
 ## List all containers
 
-`docker ps -a`  
-`docker container ls -a`
+    docker ps -a
+    docker container ls -a
 
 ## Stop / start existing container
 
-`docker stop|start CONTAINER_NAME`
+    docker stop|start container_name
 
 ## Create container from your own image
 (note there is no command specified as definded in Dockerfile where image was created from. Ports specified as host:container)
@@ -67,12 +64,12 @@ Containers can then be made from that image and run on a host.
 
 ## Attach to a running container (like run it)
 
-`docker attach CONTAINER_NAME`  
-`docker container exec`
+    docker attach container_name
+    docker container exec
 
 ## Exit interactive session in a container
 
-`ctrl pq`
+    ctrl pq
 
 ## Dockerfile to create an image
 
@@ -84,14 +81,14 @@ Containers can then be made from that image and run on a host.
 
 ## Create image from Dockerfile
 
-`docker build -t imagename:latest .`
+    docker build -t imagename:latest .
 
 ## Push image to repo
 
-`docker push davepain/ubuntu_with_node:latest`  
-`docker image push davepain/ubuntu_with_node:latest`
+    docker push davepain/ubuntu_with_node:latest
+    docker image push davepain/ubuntu_with_node:latest
     
 ## Create and push another tag
 
-`docker image tag davepain/ubuntu_with_node:v2.0`  
-`docker image push davepain/ubuntu_with_node:v2.0`
+    docker image tag davepain/ubuntu_with_node:v2.0
+    docker image push davepain/ubuntu_with_node:v2.0
