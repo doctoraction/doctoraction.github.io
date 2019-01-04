@@ -1,95 +1,95 @@
-##DOCKER##
+# DOCKER
 
-##Misc##
+## Misc
 
-    Need to be sudo
+Need to be sudo
 
-##Typical work process##
+## Typical work process
 
-    Containers are made from images. eg. from an ubuntu image.
-    Images are stored in repos, just like code.
-    When we create apps now we want to add our app code onto an existing image, then create and store a new image.
-    Containers can then be made from that image and run on a host.
+Containers are made from images. eg. from an ubuntu image.
+Images are stored in repos, just like code.
+When we create apps now we want to add our app code onto an existing image, then create and store a new image.
+Containers can then be made from that image and run on a host.
 
-    create content of app to run in container
-    pull down image from a repo to base container image on
-    add code to image
-    specify config, eg:
-        port numbers to expose from container
-        command to run
+create content of app to run in container
+pull down image from a repo to base container image on
+add code to image
+specify config, eg:
+port numbers to expose from container
+command to run
 
-    All the above are specified in Dockerfile.
-    Code and Dockerfile live in the same folder
+All the above are specified in Dockerfile.
+Code and Dockerfile live in the same folder
 
-##Search standard repo for images##
+## Search standard repo for images
 
-    docker search ubuntu
+docker search ubuntu
 
-##Pull down container##
+## Pull down container##
 
-    docker pull ubuntu
-    docker pull ubuntu:latest
+docker pull ubuntu
+docker pull ubuntu:latest
 
-        (also docker image pull ... etc)
+(also docker image pull ... etc)
 
-##List installed images ##
+## List installed images
 
-    docker images
-    docker image ls
+docker images
+docker image ls
 
-##Create container from an image (image name and command)##
+## Create container from an image (image name and command)
 
-    docker run -it ubuntu /bin/bash (interactive mode)
-    docker run -d ubuntu /bin/bash (detached mode)
-        
-    (also docker container run ... etc)
+docker run -it ubuntu /bin/bash (interactive mode)
+docker run -d ubuntu /bin/bash (detached mode)
 
-##List running containers (Shows image container made from in IMAGE col)##
+(also docker container run ... etc)
 
-    docker ps
-    docker container ls
-    docker container ls --no-trunc (doesn't chop off the output)
+## List running containers (Shows image container made from in IMAGE col)
 
-##List all containers##
+docker ps
+docker container ls
+docker container ls --no-trunc (doesn't chop off the output)
 
-    docker ps -a
-    docker container ls -a
+## List all containers
 
-##Stop / start existing container##
+docker ps -a
+docker container ls -a
 
-    docker stop|start CONTAINER_NAME
+## Stop / start existing container
 
-##Create container from your own image (note there is no command specified as definded in Dockerfile where image was created from. Ports specified as host:container)##
+docker stop|start CONTAINER_NAME
 
-    docker run -d --name some_great_new_image_name -p 8888:8666 image_name
+## Create container from your own image (note there is no command specified as definded in Dockerfile where image was created from. Ports specified as host:container)
 
-##Attach to a running container (like run it)##
+docker run -d --name some_great_new_image_name -p 8888:8666 image_name
 
-    docker attach CONTAINER_NAME
-    docker container exec
+## Attach to a running container (like run it)
 
-##Exit interactive session in a container##
+docker attach CONTAINER_NAME
+docker container exec
 
-    ctrl pq
+## Exit interactive session in a container
 
-##Dockerfile to create an image##
+ctrl pq
 
-    FROM node:8
-    # RUN [adds stuff like installing packages etc]
-    COPY nodefirst.js .
-    ENTRYPOINT node nodefirst.js [command to run when the container starts]
-    EXPOSE 8666
+## Dockerfile to create an image
 
-##Create image from Dockerfile##
+FROM node:8
+\# RUN [adds stuff like installing packages etc]
+COPY nodefirst.js .
+ENTRYPOINT node nodefirst.js [command to run when the container starts]
+EXPOSE 8666
 
-    docker build -t imagename:latest .
+## Create image from Dockerfile
 
-##Push image to repo##
+docker build -t imagename:latest .
 
-    docker push davepain/ubuntu_with_node:latest
-    docker image push davepain/ubuntu_with_node:latest
+## Push image to repo
+
+docker push davepain/ubuntu_with_node:latest
+docker image push davepain/ubuntu_with_node:latest
     
-##Create and push another tag##
+## Create and push another tag
 
-    docker image tag davepain/ubuntu_with_node:v2.0
-    docker image push davepain/ubuntu_with_node:v2.0
+docker image tag davepain/ubuntu_with_node:v2.0
+docker image push davepain/ubuntu_with_node:v2.0
