@@ -23,7 +23,7 @@ Containers can then be made from that image and run on a host.
 
     docker search ubuntu
 
-## Pull down container
+## Pull down image
 
     docker pull ubuntu
     docker pull ubuntu:latest
