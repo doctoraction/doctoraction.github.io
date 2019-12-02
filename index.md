@@ -2,6 +2,6 @@ Sub areas:
 
 * Linux
 * [Docker](docker.html)
-* Modern JS
+* [Modern JS](js.html)
 * React
 * Java
