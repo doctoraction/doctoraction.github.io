@@ -2,9 +2,9 @@
 
 ## Misc
 
-npm install -g (global)
-npm install --savedev (?)
-npx - executes without installion (!?)
+  npm install -g (global) 
+  npm install --savedev (?)
+  npx - executes without installion (!?)
   
 ## Jest
 
