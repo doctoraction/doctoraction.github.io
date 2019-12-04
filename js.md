@@ -2,9 +2,11 @@
 
 ## Misc
 
-  npm install -g (global) 
-  npm install --savedev (?)
-  npx - executes without installion (!?)
+npm install -g (installs packages globally to home directory)
+
+npm install --savedev (something v similar to --save)
+
+npx - executes without installation (!?)
   
 ## Jest
 
