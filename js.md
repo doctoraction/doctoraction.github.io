@@ -7,6 +7,9 @@ npm install -g (installs packages globally to home directory)
 npm install --savedev (something v similar to --save)
 
 npx - executes without installation (!?)
+
+Once you#ve installed a package globaly you don;'t need to run npm ...
+  eg: create-react-app some_name not npm create-react-app some_name
   
 ## Jest
 
