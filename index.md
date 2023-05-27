@@ -1,6 +1,6 @@
 Sub areas:
 
-* Linux
+* [Linux](linux.html)
 * [Docker](docker.html)
 * [Modern JS](js.html)
 * React
