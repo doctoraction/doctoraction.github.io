@@ -22,6 +22,27 @@ Once you#ve installed a package globaly you don;'t need to run npm ...
 * npm install -g typescript
 * tsc
  
+tsc on .ts files creates js files. 
+without changes TS will ensure number of function args are the same
+
+Primitive types:
+
+string, number and boolean
+string[]
+any
+
+let davevar: string = 'sausage';
+
+Parameter and return type annotations:
+
+function doStuff(somevalue: string) : string {
+  return somevalue + 'somesuffix';
+}
+
+Object type (? makes that property optional)
+
+function printName(obj: { first: string; last?: string }) {
+
 ## Jest
 
     expect - returns an expectation object
