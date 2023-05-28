@@ -2,18 +2,46 @@
 
 ## Misc
 
-npm install -g (installs packages globally to home directory)
+`npm install -g` (installs packages globally to home directory)
 
-npm install --savedev (something v similar to --save)
+`npm install --savedev` (something v similar to --save)
 
-npx - executes without installation (!?)
+`npx something` - executes without installation (!?)
 
-Once you#ve installed a package globaly you don;'t need to run npm ...
-  eg: create-react-app some_name not npm create-react-app some_name
+Once you've installed a package globally you don't need to run npm ...
+  eg: `create-react-app some_name` not `npm create-react-app some_name`
 
 ## Functions
 
-## Types, objects, Arrays ...
+## Types, Objects, Arrays ...
+
+Objects are collections of properties (simple values, objects or functions).
+
+`person.name.first`
+
+`person["name"]["first"]`
+
+### Inheritance
+
+Each object has a private property which holds a link to another object called its prototype, that protoype has a prototype, etc, until that prototype is `null`.
+
+The property of an object that points to its prototype is not called prototype. Its name is not standard: all browsers use `__proto__`, ECMAScript standard is `someObject.[[Prototype]]`.
+The standard way to access an object's prototype is `Object.getPrototypeOf(someobject)` and there is a `Object.setPrototypeOf(obj, prototype)`.
+When we try to access a property, the engine looks in the objects, then the prototype, then that one's prototype, etc.
+So objects inherit all properties of the prototypes chain.
+
+Using object Constructors
+
+```
+function Person(name) {
+  this.name = name;
+  this.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);
+  };
+}
+
+const salva = new Person("Salva");
+```
 
 ## Classes
 
