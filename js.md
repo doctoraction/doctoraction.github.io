@@ -10,15 +10,18 @@ npx - executes without installation (!?)
 
 Once you#ve installed a package globaly you don;'t need to run npm ...
   eg: create-react-app some_name not npm create-react-app some_name
-  
-## Arrays and objects
+
+## Functions
+
+## Types, objects, Arrays ...
 
 ## Classes
 
 ## TypeScript
 
-## Functions
-  
+* npm install -g typescript
+* tsc
+ 
 ## Jest
 
     expect - returns an expectation object
