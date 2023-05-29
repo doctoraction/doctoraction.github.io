@@ -43,6 +43,8 @@ The standard way to access an object's prototype is `Object.getPrototypeOf(someo
 When we try to access a property, the engine looks in the objects, then the prototype, then that one's prototype, etc.
 So objects inherit all properties of the prototypes chain.
 
+(Note: The `func.prototype` property of functions specifies the [[Prototype]] to be assigned to **all** instances of objects created by the given function when used as a constructor.)
+
 ## Classes
 
 ## TypeScript
