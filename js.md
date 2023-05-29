@@ -33,6 +33,39 @@ function Person(name) {
 
 const salva = new Person("Salva");
 ```
+## Classes
+
+Similar to function iobject constructors. Key features of classes:
+
+* Constructor
+* Instance methods and instance fields
+* Static methods and static fields
+
+```
+class MyClass {
+
+  constructor() {
+  }
+  myField = "foo";
+  myMethod() {
+  }
+    
+  static myStaticField = "bar";
+  static myStaticMethod() {  
+  }
+  static {
+  }
+  
+  // Fields, methods, static fields, and static methods all have
+  // "private" forms
+  #myPrivateField = "bar";
+}
+
+const myInstance = new MyClass(); // new is mandatory
+console.log(myInstance.myField); // 'foo'
+myInstance.myMethod();
+
+```
 
 ### Inheritance
 
@@ -44,8 +77,6 @@ When we try to access a property, the engine looks in the objects, then the prot
 So objects inherit all properties of the prototypes chain.
 
 (Note: The `func.prototype` property of functions specifies the [[Prototype]] to be assigned to **all** instances of objects created by the given function when used as a constructor.)
-
-## Classes
 
 ## TypeScript
 
