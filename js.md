@@ -66,6 +66,12 @@ const myInstance = new MyClass(); // new is mandatory
 console.log(myInstance.myField); // 'foo'
 myInstance.getMyField();
 
+console.log(MyClass.myStaticField) // static reference - not available on instances
+console.log(MyClass.myStaticMethod()) // static reference - not available on instances
+
+class AnotherClass extends MyClass {
+}
+
 ```
 
 Private fields support Java style encapsulatiom. However, a class method **can** read the private fields of other instances of the same class.
