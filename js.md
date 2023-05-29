@@ -47,7 +47,8 @@ class MyClass {
   constructor() {
   }
   myField = "foo";
-  myMethod() {
+  getMyField() {
+    return this.myField;
   }
     
   static myStaticField = "bar";
@@ -63,9 +64,11 @@ class MyClass {
 
 const myInstance = new MyClass(); // new is mandatory
 console.log(myInstance.myField); // 'foo'
-myInstance.myMethod();
+myInstance.getMyField();
 
 ```
+
+Private fields support Java style encapsulatiom. However, a class method **can** read the private fields of other instances of the same class.
 
 ### Inheritance
 
