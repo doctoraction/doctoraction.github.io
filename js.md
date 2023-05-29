@@ -89,29 +89,31 @@ So objects inherit all properties of the prototypes chain.
 
 ## TypeScript
 
-* npm install -g typescript
-* tsc
+`npm install -g typescript`
+`tsc`
  
 tsc on .ts files creates js files. 
 without changes TS will ensure number of function args are the same
 
 Primitive types:
 
-string, number and boolean
-string[]
-any
+`string`, `number` and `boolean`
+`string[]`
+`any`
 
-let davevar: string = 'sausage';
+`let davevar: string = 'sausage';`
 
 Parameter and return type annotations:
 
+```
 function doStuff(somevalue: string) : string {
   return somevalue + 'somesuffix';
 }
+```
 
 Object type (? makes that property optional)
 
-function printName(obj: { first: string; last?: string }) {
+`function printName(obj: { first: string; last?: string }) { }`
 
 ## Jest
 
