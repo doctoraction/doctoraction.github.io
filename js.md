@@ -1,4 +1,4 @@
-# Modern JS
+# Modern JS & Node/NPM/etc
 
 ## Misc
 
