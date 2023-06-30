@@ -11,8 +11,6 @@
 Once you've installed a package globally you don't need to run npm ...
   eg: `create-react-app some_name` not `npm create-react-app some_name`
 
-## Functions
-
 ## Types, Objects, Arrays ...
 
 Objects are collections of properties (simple values, objects or functions).
@@ -33,6 +31,18 @@ function Person(name) {
 
 const salva = new Person("Salva");
 ```
+
+Arrays are a special type of object. The typeof operator in JavaScript returns "object" for arrays.
+Arrays have extra methods and properties. eg. `cars.length`, `cars.sort()`
+Arrays can use numbers to access elements while objects always use names
+
+```
+someArray[0]
+someObject.someProperty
+```
+
+What creates an array and what a plain object?
+
 ## Classes
 
 Similar to function iobject constructors. Key features of classes:
@@ -86,6 +96,8 @@ When we try to access a property, the engine looks in the objects, then the prot
 So objects inherit all properties of the prototypes chain.
 
 (Note: The `func.prototype` property of functions specifies the [[Prototype]] to be assigned to **all** instances of objects created by the given function when used as a constructor.)
+
+## Functions
 
 ## TypeScript
 
