@@ -59,6 +59,12 @@ someArray[0]
 someObject.someProperty
 ```
 
+**Object or Array?**
+When user assigns values to keys with datatype Array, it transforms into an object
+Any array with a string key (rather than a numeric one) loses it's length property.
+
+[Looping over arrays and objects](https://medium.com/chingu/looping-over-arrays-and-objects-in-javascript-57e1188c1ba2)
+
 What creates an array and what a plain object?
 
 ### Inheritance
