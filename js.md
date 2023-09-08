@@ -2,18 +2,36 @@
 
 ## Misc
 
+`npm init -y` creates package.json
+
+`npm install --save chromedriver@107.0.3` install specific version and update package.json
+
+`npm install --save-dev` saves under devDependencies - won't be packaged for deployment
+
 `npm install -g` (installs packages globally to home directory)
 
-`npm install --savedev` (something v similar to --save)
+Once installed globally you don't need to run npm ...
+  eg: `create-react-app some_name` not `npm create-react-app some_name`
 
 `npx something` - executes without installation (!?)
 
-Once you've installed a package globally you don't need to run npm ...
-  eg: `create-react-app some_name` not `npm create-react-app some_name`
+`npm run somethinginpackagejsonscripts`
+
+`npm publish`
+
+`npm update`
+
+`npm list`
+
+`npm audit fix`
+
+`npm show packagename` - shows latest version
+
+`npm view chromedriver versions`
 
 ## Types, Objects, Arrays ...
 
-Objects are collections of properties (simple values, objects or functions).
+**Objects** are collections of properties (simple values, objects or functions).
 
 `person.name.first`
 
@@ -32,7 +50,7 @@ function Person(name) {
 const salva = new Person("Salva");
 ```
 
-Arrays are a special type of object. The typeof operator in JavaScript returns "object" for arrays.
+**Arrays** are a special type of object. The typeof operator in JavaScript returns "object" for arrays.
 Arrays have extra methods and properties. eg. `cars.length`, `cars.sort()`
 Arrays can use numbers to access elements while objects always use names
 
