@@ -1,14 +1,19 @@
-DATA
+# DATA
 
-SQLite
+## SQLite
 
 `sudo apt sqlite3`
 
-create and insert
-`sqlite3 somename.db`
-`create table....`
-`insert into....`
-`.quit` to exit
+Create and insert
 
-connect to
+`sqlite3 somename.db`
+
+`create table....`
+
+`insert into....`
+
+`.quit`
+
+Connect
+
 `sqlite3 somename.db`
