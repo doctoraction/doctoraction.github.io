@@ -4,6 +4,12 @@
 
 `go env` - much useful info that gos some way to explaining under the hood workings
 
+* GOROOT - location of the Go SDK - compiler, go tools, standard libraries
+* GOPATH - locations of go source code
+	* src: Your source code has to be here if you don’t use go modules.
+	* pkg: Go packages that are used in your projects
+	* bin: Compiled executable programs
+
 `go mod init example/hello` - creates a go.mod file
 
 `go get github.com/mattn/go-sqlite3` gets the package and updates go.mod 
