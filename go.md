@@ -2,7 +2,7 @@
 
 `go help`
 
-`go env`
+`go env` - much useful info that gos some way to explaining under the hood workings
 
 `go mod init example/hello` - creates a go.mod file
 
