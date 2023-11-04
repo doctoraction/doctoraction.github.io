@@ -24,6 +24,14 @@
 
 `go install` does ?
 
+# Code organisations
+
+A *package* is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package. 
+
+A *module* is a collection of packages that are released together. A file named go.mod at the root declares the module path: the import path prefix for all packages within the module.
+The module contains the packages in the directory containing its go.mod file as well as subdirectories of that directory, up to the next subdirectory containing another go.mod file (if any). 
+A Go repository typically contains only one module, located at the root of the repository.
+
 # Exported names
 
 In Go, a name is exported if it begins with a capital letter. For example, Pizza is an exported name, as is Pi, which is exported from the math package.
