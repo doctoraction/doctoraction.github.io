@@ -5,3 +5,4 @@ Sub areas:
 * [Modern JS](js.html)
 * [Go](go.html)
 * [Data](data.html)
+* [Git](git.html)
