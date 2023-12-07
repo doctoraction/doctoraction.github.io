@@ -2,7 +2,7 @@
 
 Github
 
-At home, HTTPS cloning
+At home, use HTTPS cloning with personal access token for password
 
 `git config --list --show-origin` show all config, and where it's from
 `git config --local user.name "Local User"`
