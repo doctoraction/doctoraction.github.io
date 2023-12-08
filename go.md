@@ -32,6 +32,24 @@ A *module* is a collection of packages that are released together. A file named 
 The module contains the packages in the directory containing its go.mod file as well as subdirectories of that directory, up to the next subdirectory containing another go.mod file (if any). 
 A Go repository typically contains only one module, located at the root of the repository.
 
+# Making your own package
+
+Some combination of the following commands. :-) 
+
+```
+go mod edit -replace example/aocutil=../aocutil
+go mod tidy
+go get .
+
+import (
+	aocutil "example/aocutil"
+)
+
+...
+
+scanner := aocutil.CreateFileScanner("input.txt")
+```
+
 # Exported names
 
 In Go, a name is exported if it begins with a capital letter. For example, Pizza is an exported name, as is Pi, which is exported from the math package.
