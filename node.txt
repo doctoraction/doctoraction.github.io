@@ -1,0 +1,209 @@
+====
+NODE
+====
+
+	run any js file:
+		
+		node file.js
+	
+	npm - package manager
+
+	create http server from any dir
+
+		http-server -p8666 
+
+	Update Node.js on Windows and macOS with NPM
+	
+		NOTE: on this machine I installed zip file of node and updated path to point to it
+		
+	npm comes with node and lives in node_modules. You can upgrade npm with 
+
+		If you want to upgrade Node.js from the command line, use the n model within the npm command. The n feature allows you to interact with different Node.js versions.
+
+		1. Before updating the Node.js release, check which version you are currently using with:
+
+		node -v
+		2. Next, clear npm cache with the command:
+
+		npm cache clean -f
+		3. Install n globally:
+
+		npm install -g n
+		4. Now that you have n installed, you can use the module to install the latest stable release of Node.js:
+
+		sudo n stable
+		Alternatively, you can install the Node.js release with the latest features:
+
+		sudo n latest
+		Or, install a specific version number with:
+
+		n [version.number]
+
+	Find dependency tree for specific package
+	
+		npm ls path-parse
+		
+			address-service-sync-sls@1.0.0 C:\java-practise\git\address-service-sync-sls
+			`-- eslint-plugin-import@2.23.4
+			  `-- resolve@1.20.0
+				`-- path-parse@1.0.6 
+				
+	npm update
+	
+		updates to latest versions
+		
+	npm list shows dep tree
+	
+	npm ls [packagename] shows ancestors of package
+	
+	"resolutions" tag in package.json specifies versions of sub dependencies
+		- requires     "preinstall": "npx npm-force-resolutions", to be in script attribute of package.json
+
+	npm audit fix
+		
+		looks for things to update and updates them
+	
+	npm show [packagename] - shows latest version
+	
+	From Michael:
+	
+		https://rs-ddt.slack.com/archives/CPSJQ17TN/p1632472127001500
+		https://rs-components.atlassian.net/wiki/spaces/TH/pages/908821270/Security+Practice+-+NPM+package+dependency+scans
+		https://docs.npmjs.com/cli/v7/commands/npm-audit#examples
+	
+	
+	npm config set @rs-ui:registry=https://rscomponents.jfrog.io/rscomponents/api/npm/npm/
+	npm config set registry https://rscomponents.jfrog.io/rscomponents/api/npm/npm/
+    npm login
+
+	Upgrade npm from 8 to 9:
+		
+		npm -g install npm@9
+
+	creates package.json
+		
+		npm init -y
+
+	installs node modules
+
+		npm install --save selenium-webdriver chromedriver geckodriver
+
+	install specific version and update package.json
+
+		npm install --save chromedriver@107.0.3
+
+	install package under the devDependencies object in your package.json file	
+	any packages listed under the devDependencies will not be installed when you are in the production environment.
+
+		npm install --save-dev some-module
+
+	show all available versions
+
+		npm view chromedriver versions
+
+	show packages in project
+		
+		npm list
+		
+		npm list packagename
+				
+		npm install [package-name]
+		adds the package to the package.json dependencies
+		
+	Writing own modules.
+
+		import vs require? 
+
+		"File is a CommonJS module; it may be converted to an ES module."
+
+		CommonJS Module
+			
+			// export
+			
+				module.exports.add = function(a, b) {
+					return a + b;
+				} 
+				
+			or
+				
+				function addStuff(a, b) {
+					return a + b;
+				} 
+
+				module.exports = {
+					add: addStuff
+				};
+				
+				module.exports = { addStuff }
+
+			// import
+
+				const {add} = require('./util')
+
+				console.log(add(5, 5)) // 10
+				
+	npm packages
+
+		with @ at the start
+
+		'scoped packages', which allow NPM packages to be namespaced. Every user and organization on NPM has their own scope, and they are the only people who can add packages to it.
+
+		It allows organizations to make it clear which packages are 'official'
+		If a package has the scope @angular, you know it was published by the Angular core team.
+		The package name only has to be unique to the scope it is published in, not the entire registry.
+		For example, the package name http is already taken in the main repository, but Angular is able to have @angular/http as well.
+
+====
+ JS
+====
+
+	function syntax
+	
+		passing a named function - don't use paretheses as that is actually executing the function.
+		
+	promises
+	
+		when calling something that returns a promise, chain the calls to `then` and `error`, passing functions to each telling what to do
+		
+	async / await
+	
+		also handles promises but in a slicker way. use catch block to handle errors
+
+	fetch API
+	
+		returns promises that then also return promises
+		
+	mozilla api docs
+
+	Arrays vs objects vs maps
+
+		When user assigns values to keys with datatype Array, it transforms into an object
+		
+		any array with a string key (rather than a numeric one) loses it's length property.
+
+==========
+TypeScript
+==========
+
+By MicroSoft
+
+	When you work with TypeScript, remember in almost all situations that TypeScript will be compiled (or transpiled) into JavaScript, and the JavaScript is actually executed by the runtime. You can use TypeScript on any project where you use JavaScript.
+		
+		function moveCrate(sourceStack: string[], targetStack: string[], numberOfCrates: number) {
+		while (numberOfCrates > 0) {
+			numberOfCrates --;
+			let crate = sourceStack.pop();
+			if (crate) {
+				targetStack.push(crate);
+			}
+		}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
