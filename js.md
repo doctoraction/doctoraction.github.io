@@ -190,8 +190,9 @@ promise.then(null, err => {
 ```
 You can instantiate a promise using new Promise().
 
-The promise constructor takes 1 function parameter: called executor. The executor function takes two parameters: callback functions resolve() and reject(). As someone creating a new promise, you're responsible for writing the executor function, and the JavaScript runtime is responsible for passing you resolve() and reject().
-
+The promise constructor takes 1 function parameter: called executor. The executor function takes two parameters: callback functions resolve() and reject().
+As someone creating a promise, you write the executor function, and the JavaScript runtime is responsible for passing you resolve() and reject().
+As the writer of the executor function you are providing the value to the resolve function that the caller has specified.
 ```
 const promise = new Promise(function executor(resolve, reject) {
   // Fulfill the promise with value '42' after 100 ms.
@@ -202,6 +203,7 @@ promise.then(value => {
   value; // 42
 });
 ```
+
 
 ## Jest
 
