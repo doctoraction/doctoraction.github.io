@@ -176,21 +176,22 @@ const onRejected = () => {};
 // `onFulfilled` called if the promise is fulfilled, `onRejected` if the promise is rejected.
 promise.then(onFulfilled, onRejected);
 
-// OR returns value via the then function
+// promises return values accesible via the then function
 promise.then(value => {
   value; // 42
 });
 
-// OR immediately rejected
+// a promise immediately rejected
 const promise = Promise.reject(new Error('Oops!'));
-// note the parameter position
+// note the parameter position of err
 promise.then(null, err => {
   err.message; // 'Oops!'
 });
 ```
 You can instantiate a promise using new Promise().
 
-The promise constructor takes 1 parameter: a function called executor. The executor function takes two parameters: callback functions resolve() and reject(). As someone creating a new promise, you're responsible for writing the executor function, and the JavaScript runtime is responsible for passing you resolve() and reject().
+The promise constructor takes 1 function parameter: called executor. The executor function takes two parameters: callback functions resolve() and reject(). As someone creating a new promise, you're responsible for writing the executor function, and the JavaScript runtime is responsible for passing you resolve() and reject().
+
 ```
 const promise = new Promise(function executor(resolve, reject) {
   // Fulfill the promise with value '42' after 100 ms.
