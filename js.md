@@ -152,6 +152,56 @@ Object type (? makes that property optional)
 
 `function printName(obj: { first: string; last?: string }) { }`
 
+## Promises
+https://masteringjs.io/tutorials/fundamentals/promise
+
+A promise represents an async action. Calling a function that returns a promise is asking something to do an async action, and there are ways to receive the results of that action.
+
+```
+const promise = axios.get("http://asdasd");
+// register a callback function called when succeeds
+promise.then(res => {
+  res.data.query.answer;
+})
+```
+When a promise is settled, any handler functions that you registered using .then() are called. The then() function takes 2 parameters: onFulfilled and onRejected. JavaScript calls onFulfilled() if the promise is fulfilled, or onRejected() if the promise is rejected.
+
+```
+// a promise that is immediately fulfilled with value 42.
+const promise = Promise.resolve(42);
+
+const onFulfilled = () => {};
+const onRejected = () => {};
+
+// `onFulfilled` called if the promise is fulfilled, `onRejected` if the promise is rejected.
+promise.then(onFulfilled, onRejected);
+
+// OR returns value via the then function
+promise.then(value => {
+  value; // 42
+});
+
+// OR immediately rejected
+const promise = Promise.reject(new Error('Oops!'));
+// note the parameter position
+promise.then(null, err => {
+  err.message; // 'Oops!'
+});
+```
+You can instantiate a promise using new Promise().
+
+The promise constructor takes 1 parameter: a function called executor. The executor function takes two parameters: callback functions resolve() and reject(). As someone creating a new promise, you're responsible for writing the executor function, and the JavaScript runtime is responsible for passing you resolve() and reject().
+```
+const promise = new Promise(function executor(resolve, reject) {
+  // Fulfill the promise with value '42' after 100 ms.
+  setTimeout(() => resolve(42), 100);
+});
+
+promise.then(value => {
+  value; // 42
+});
+```
+
 ## Jest
 
     expect - returns an expectation object
