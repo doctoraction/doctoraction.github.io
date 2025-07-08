@@ -132,8 +132,6 @@ Private fields support Java style encapsulatiom. However, a class method **can**
 
 Without changes TS will ensure number of function args are the same.
 
-In Java, it’s meaningful to think of a one-to-one correspondence between runtime types and their compile-time declarations.
-In TypeScript, it’s better to think of a type as a set of values that share something in common. Because **types are just sets**, a particular value can belong to **many sets at the same time**.
 Primitive types:
 
 `string`, `number` and `boolean`
@@ -155,6 +153,15 @@ function doStuff(somevalue: string) : string {
 Object type (? makes that property optional)
 
 `function printName(obj: { first: string; last?: string }) { }`
+
+Concepts:
+
+> In Java, it’s meaningful to think of a one-to-one correspondence between runtime types and their compile-time declarations.
+In TypeScript, it’s better to think of a type as a set of values that share something in common. Because **types are just sets**, a particular value can belong to **many sets at the same time**.
+>
+> TypeScript’s type system is structural, not nominal. Any object that has the right properties can be used. The relationships between types are determined by the properties they contain, not whether or how they were declared.
+>
+> Developer-created types are **not present in any form** at runtime.
 
 ## Promises
 https://masteringjs.io/tutorials/fundamentals/promise
