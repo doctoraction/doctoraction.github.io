@@ -127,15 +127,19 @@ Private fields support Java style encapsulatiom. However, a class method **can**
 ## TypeScript
 
 `npm install -g typescript`
-`tsc`
- 
-tsc on .ts files creates js files. 
-without changes TS will ensure number of function args are the same
 
+`tsc` - tsc on .ts files creates js files.
+
+Without changes TS will ensure number of function args are the same.
+
+In Java, it’s meaningful to think of a one-to-one correspondence between runtime types and their compile-time declarations.
+In TypeScript, it’s better to think of a type as a set of values that share something in common. Because **types are just sets**, a particular value can belong to **many sets at the same time**.
 Primitive types:
 
 `string`, `number` and `boolean`
+
 `string[]`
+
 `any`
 
 `let davevar: string = 'sausage';`
