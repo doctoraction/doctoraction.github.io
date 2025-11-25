@@ -1,3 +1,6 @@
-Recipe Book Contents
+# Recipe Book Contents
 
-Sausage Noodle Stir-Fry - 66
+
+| Recipe                    |        Page |
+| ------------------------- | ----------- |
+| Sausage Noodle Stir-Fry   | 64          |
