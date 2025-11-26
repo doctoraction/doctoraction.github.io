@@ -3,4 +3,5 @@
 
 | Recipe                    |        Page |
 | ------------------------- | ----------- |
-| Sausage Noodle Stir-Fry   | 64          |
+| Sausage noodle stir fry   | 64          |
+| Leek & smoked mackerel penne bake | 47 |
