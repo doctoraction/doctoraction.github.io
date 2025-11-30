@@ -8,6 +8,6 @@
 | Golden veggie shepherd's pie | 95 |
 | Garlic mushroom pasta | 146 |
 | Chickpea curry | 145 |
-|  |  |
+| Spanish tortilla | 36 |
 |  |  |
 |  |  |
